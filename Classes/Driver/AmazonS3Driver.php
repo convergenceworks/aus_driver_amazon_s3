@@ -230,6 +230,7 @@ class AmazonS3Driver extends AbstractHierarchicalFilesystemDriver
         $this->initializeBaseUrl()
             ->initializeSettings()
             ->initializeClient();
+
         // Test connection if we are in the edit view of this storage
         if (TYPO3_MODE === 'BE' && !empty($_GET['edit']['sys_file_storage'])) {
             $this->testConnection();
@@ -1106,6 +1107,11 @@ class AmazonS3Driver extends AbstractHierarchicalFilesystemDriver
             ],
             'validation' => false,
         ];
+
+        if(!empty($this->configuration['endpoint'])) {
+            $configuration['endpoint'] = $this->configuration['endpoint'];
+        }
+
         if (!empty($GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy'])) {
             $configuration['http']['proxy'] = $GLOBALS['TYPO3_CONF_VARS']['HTTP']['proxy'];
         }

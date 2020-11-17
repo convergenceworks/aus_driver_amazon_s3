@@ -110,6 +110,10 @@
 								<numIndex index="0">AWS GovCloud (US) - us-gov-west-1</numIndex>
 								<numIndex index="1">us-gov-west-1</numIndex>
 							</numIndex>
+							<numIndex index="21" type="array">
+								<numIndex index="0">Black Blaze B2 - west-001</numIndex>
+								<numIndex index="1">west-001</numIndex>
+							</numIndex>
 						</items>
 						<size>1</size>
 						<minitems>1</minitems>
@@ -136,6 +140,15 @@
 					</config>
 				</TCEforms>
 			</secretKey>
+			<endpoint>
+				<TCEforms>
+					<label>LLL:EXT:aus_driver_amazon_s3/Resources/Private/Language/locallang_flexform.xlf:driverConfiguration.endpoint</label>
+					<config>
+						<type>input</type>
+						<size>30</size>
+					</config>
+				</TCEforms>
+			</endpoint>
 			<publicBaseUrl>
 				<TCEforms>
 					<label>LLL:EXT:aus_driver_amazon_s3/Resources/Private/Language/locallang_flexform.xlf:driverConfiguration.publicBaseUrl</label>
